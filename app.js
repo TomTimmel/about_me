@@ -59,10 +59,10 @@ if(travel.toLowerCase() === 'yes' || travel.toLowerCase() === 'y') {
 var progr = prompt('Do I like coding?');
 
 if(progr.toLowerCase() === 'yes' || progr.toLowerCase() === 'y') {
-  alert('Correct! Now check out this website to see more about my background!');
-  console.log('There answer was correct, I do like coding');
+  alert('Correct! Now check out this website to see more about my background, thanks ' + userName + '!');
+  console.log('There answer was correct, I do like coding, now check out this website to see more about my background, thanks ' + userName + '!');
 } else if(progr.toLowerCase() === 'no' || progr.toLowerCase() === 'n'){
-  alert('Nope, I do like coding, now check out this website to see more about my background');
+  alert('Nope, I do like coding, now check out this website to see more about my background, thanks ' + userName + '!');
   console.log('There answer was incorrect, I do like coding');
 } else {
   alert('You can\'t follow instructions! Well, hopefully you can read so you can look at my website...');

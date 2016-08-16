@@ -1,9 +1,5 @@
-*{
-  border: 2px dashed red;
-}
-
 * {
-  background-color:		#83d0c9;
+  background-color:		#a7adba;
 }
 *{
   font-family: Times;
@@ -16,13 +12,29 @@
 #bio{
   display:inline;
   float:left;
+  margin-top:0;
 }
-.logo{
+#logo1{
   display:inline;
   float:left;
   width: 60px;
 }
-h2 {
-  padding-left: 10px;
-  margin: none;
+#logo2{
+  display:inline;
+  float:left;
+  height:35px;
+  width:130px;
+}
+#bio h2 {
+  margin:0;
+  padding-left: 160px;
+}
+#job{
+  margin-top:200px;
+}
+#bio p{
+  padding-left: 165px;
+}
+.pJob {
+  padding-left: 135px;
 }
