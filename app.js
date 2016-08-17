@@ -59,12 +59,42 @@ if(travel.toLowerCase() === 'yes' || travel.toLowerCase() === 'y') {
 var progr = prompt('Do I like coding?');
 
 if(progr.toLowerCase() === 'yes' || progr.toLowerCase() === 'y') {
-  alert('Correct! Now check out this website to see more about my background, thanks ' + userName + '!');
+  alert('Correct! You\'re doing great');
   console.log('There answer was correct, I do like coding, now check out this website to see more about my background, thanks ' + userName + '!');
 } else if(progr.toLowerCase() === 'no' || progr.toLowerCase() === 'n'){
-  alert('Nope, I do like coding, now check out this website to see more about my background, thanks ' + userName + '!');
+  alert('Nope, I do like coding' );
   console.log('There answer was incorrect, I do like coding');
 } else {
-  alert('You can\'t follow instructions! Well, hopefully you can read so you can look at my website...');
+  alert('You can\'t follow instructions!');
   console.log('Coding-They are too dumb to answer yes or no');
+}
+alert('Welcome to my guessing game!');
+
+var randomNum = (Math.floor(Math.random() * 10) + 1);
+console.log('the number is:', randomNum);
+for (var i = 0; i < 4; i++){
+  var userGuess = prompt('Guess a number from 1-10');
+  userGuess = Number(userGuess);
+  if(randomNum === userGuess) {
+    alert('Congratulations, you got it! Now check out this website to see more about my background, thanks ' + userName + '!');
+    i = 4;
+  }else if (i < 3) {
+    if(randomNum > userGuess){
+      alert('Nice try, but that\'s too low...try again!');
+    }else {
+      alert('Nice try, but that\'s too high...try again!');
+    }
+    alert('Nice try, but that\'s not it...try again!');
+  }else {
+    alert ('Nope you didn\'t guess it, Now check out this website to see more about my background, thanks ' + userName + '!');
+  }
+}
+var countryGuess = prompt('Out of the listed countries, guess which ones I have been to in the last 2 years? Hint:There are 6! Norway, India, Argentina, Indonesia, Kenya, Thailand, Chile, Brazil, El Salvador, Guadalupe, China');
+var countryGuess = countryGuess.toLowerCase;
+var countryAnswer = new Array('argentina', 'indonesia', 'thailand', 'chile', 'el salvador', 'guadalupe');
+for(countryAnswer.toLowerCase = 0; countryAnswer<6, )
+if(countryGuess.toLowerCase === countryAnswer[]){
+  alert('great job');
+} else {
+  alert('woops');
 }
