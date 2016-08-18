@@ -110,9 +110,9 @@ for(var k = 0; k < 6; k++) {
   }
   if(checkAns === true){
     correctAns = correctAns + 1;
-    alert('Great job, you answered ' + correctAns + ' out of 7 correctly. Now check out this website to see more about my background, thanks ' + '!');
+    alert('Great job, you answered ' + correctAns + ' out of 7 correctly. Now check out this website to see more about my background, thanks ' + userName + '!');
     k = 5;
   } else{
-    alert('woops');
+    alert('Woops, I have not been there, please try again...');
   }
 }
