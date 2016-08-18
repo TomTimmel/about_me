@@ -5,14 +5,19 @@ alert('Thanks ' + userName + ', please answer the following questions for me by 
 console.log ('The users name is ' + userName);
 var correctAns = 0;
 
-function whereAmIFromQuestion() {
-  var whereAmIFrom = prompt('Am I from Alaska?');
+var theFirstQuestions = ['Am I from Alaska?', 'Do I love to play Ultimate Frisbee?', 'Do I have a girlfriend named Christine?', 'Do I like to travel?','Do I like coding?'];
 
-  if(whereAmIFrom.toLowerCase() === 'yes' || whereAmIFrom.toLowerCase() === 'y') {
+var theCorrectAnswers = ['yes','yes','yes','yes','yes'];
+var theIncorrectAnswers = ['no', 'no', 'no', 'no', 'no'];
+
+function whereAmIFromQuestion() {
+  var whereAmIFrom = prompt(theFirstQuestions[0]);
+
+  if(whereAmIFrom.toLowerCase() === theCorrectAnswers[0] || whereAmIFrom.toLowerCase() === theCorrectAnswers[0][0]) {
     alert('Right! I lived in Alaska for the last 20 years, but I grew up in Cincinnati...');
     console.log('There answer was correct, I am from Alaska');
     correctAns = correctAns + 1;
-  } else if(whereAmIFrom.toLowerCase() === 'no' || whereAmIFrom.toLowerCase() === 'n'){
+  } else if(whereAmIFrom.toLowerCase() === theIncorrectAnswers[0] || whereAmIFrom.toLowerCase() === theIncorrectAnswers[0][0]){
     alert('Actually I am from Alaska.');
     console.log('There answer was incorrect, I am from Alaska.');
   } else {
@@ -23,13 +28,13 @@ function whereAmIFromQuestion() {
 whereAmIFromQuestion();
 
 function favoriteGame() {
-  var myFavoriteGame = prompt('Do I love to play Ultimate Frisbee?');
+  var myFavoriteGame = prompt(theFirstQuestions[1]);
 
-  if(myFavoriteGame.toLowerCase() === 'yes' || myFavoriteGame.toLowerCase() === 'y') {
+  if(myFavoriteGame.toLowerCase() === theCorrectAnswers[1] || myFavoriteGame.toLowerCase() === theCorrectAnswers[1][0]) {
     alert('Yes! I love to play Ultimate, my league team this year was a lot of fun. I also like basketball...');
     console.log('There answer was correct, I love ultimate.');
     correctAns = correctAns + 1;
-  } else if(myFavoriteGame.toLowerCase() === 'no' || myFavoriteGame.toLowerCase() === 'n'){
+  } else if(myFavoriteGame.toLowerCase() === theIncorrectAnswers[1] || myFavoriteGame.toLowerCase() === theIncorrectAnswers[1][0]){
     alert('Nope, Ultimate is my favorite game.');
     console.log('There answer was incorrect, I love ultimate.');
   } else {
@@ -40,13 +45,13 @@ function favoriteGame() {
 favoriteGame();
 
 function girlfriendQuestion() {
-  var girlfriend = prompt('Do I have a girlfriend named Christine?');
+  var girlfriend = prompt(theFirstQuestions[2]);
 
-  if(girlfriend.toLowerCase() === 'yes' || girlfriend.toLowerCase() === 'y') {
+  if(girlfriend.toLowerCase() === theCorrectAnswers[2] || girlfriend.toLowerCase() === theCorrectAnswers[2][0]) {
     alert('Yes! I\'m pretty lucky, she\'s great!');
     console.log('There answer was correct, Christine is my girlfriend');
     correctAns = correctAns + 1;
-  } else if(girlfriend.toLowerCase() === 'no' || girlfriend.toLowerCase() === 'n'){
+  } else if(girlfriend.toLowerCase() === theIncorrectAnswers[2] || girlfriend.toLowerCase() === theIncorrectAnswers[2][0]){
     alert('Nope, I do have a girlfriend named Christine.');
     console.log('There answer was incorrect, I have a girlfriend named Christine');
   } else {
@@ -57,13 +62,13 @@ function girlfriendQuestion() {
 girlfriendQuestion();
 
 function travelQuestion() {
-  var travel = prompt('Do I like to travel?');
+  var travel = prompt(theFirstQuestions[3]);
 
-  if(travel.toLowerCase() === 'yes' || travel.toLowerCase() === 'y') {
+  if(travel.toLowerCase() === theCorrectAnswers[3] || travel.toLowerCase() === theCorrectAnswers[3][0]) {
     alert('Yes! I just got back from Indonesia!');
     console.log('There answer was correct, I do like to travel');
     correctAns = correctAns + 1;
-  } else if(travel.toLowerCase() === 'no' || travel.toLowerCase() === 'n'){
+  } else if(travel.toLowerCase() === theIncorrectAnswers[3] || travel.toLowerCase() === theIncorrectAnswers[3][0]){
     alert('Nope, actually I do like to travel.');
     console.log('There answer was incorrect, I do like to travel');
   } else {
@@ -74,13 +79,13 @@ function travelQuestion() {
 travelQuestion();
 
 function codingQuestion() {
-  var progr = prompt('Do I like coding?');
+  var progr = prompt(theFirstQuestions[4]);
 
-  if(progr.toLowerCase() === 'yes' || progr.toLowerCase() === 'y') {
+  if(progr.toLowerCase() === theCorrectAnswers[4] || progr.toLowerCase() === theCorrectAnswers[4][0]) {
     alert('Correct! You\'re doing great.');
     console.log('There answer was correct, I do like coding, now check out this website to see more about my background, thanks ' + userName + '!');
     correctAns = correctAns + 1;
-  } else if(progr.toLowerCase() === 'no' || progr.toLowerCase() === 'n'){
+  } else if(progr.toLowerCase() === theIncorrectAnswers[4] || progr.toLowerCase() === theIncorrectAnswers[4][0]){
     alert('Nope, I do like coding.' );
     console.log('There answer was incorrect, I do like coding');
   } else {
