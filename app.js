@@ -9,91 +9,28 @@ var theFirstQuestions = ['Am I from Alaska?', 'Do I love to play Ultimate Frisbe
 
 var theCorrectAnswers = ['yes','yes','yes','yes','yes'];
 var theIncorrectAnswers = ['no', 'no', 'no', 'no', 'no'];
+var correctMessages = ['Right! I lived in Alaska for the last 20 years, but I grew up in Cincinnati...', 'Yes! I love to play Ultimate, my league team this year was a lot of fun. I also like basketball...', 'Yes! I\'m pretty lucky, she\'s great!', 'Yes! I just got back from Indonesia!', 'Correct! You\'re doing great.'];
+var incorrectMessages = ['Actually I am from Alaska.', 'Nope, Ultimate is my favorite game.', 'Nope, I do have a girlfriend named Christine.', 'Nope, actually I do like to travel.', 'Nope, I do like coding.'];
 
-function whereAmIFromQuestion() {
-  var whereAmIFrom = prompt(theFirstQuestions[0]);
+for (var m = 0; m < theFirstQuestions.length; m++) {
+  tomsQuestions(m);
+}
 
-  if(whereAmIFrom.toLowerCase() === theCorrectAnswers[0] || whereAmIFrom.toLowerCase() === theCorrectAnswers[0][0]) {
-    alert('Right! I lived in Alaska for the last 20 years, but I grew up in Cincinnati...');
-    console.log('There answer was correct, I am from Alaska');
-    correctAns = correctAns + 1;
-  } else if(whereAmIFrom.toLowerCase() === theIncorrectAnswers[0] || whereAmIFrom.toLowerCase() === theIncorrectAnswers[0][0]){
-    alert('Actually I am from Alaska.');
-    console.log('There answer was incorrect, I am from Alaska.');
+function tomsQuestions(pointer) {
+  var theResponse = prompt(theFirstQuestions[pointer]);
+
+  if(theResponse.toLowerCase() === theCorrectAnswers[pointer] || theResponse.toLowerCase() === theCorrectAnswers[pointer][0]) {
+    alert(correctMessages[pointer]);
+    console.log(correctMessages[pointer]);
+    correctAns += 1;
+  } else if(theResponse.toLowerCase() === theIncorrectAnswers[pointer] || theResponse.toLowerCase() === theIncorrectAnswers[pointer][0]){
+    alert(incorrectMessages[pointer]);
+    console.log(incorrectMessages[pointer]);
   } else {
     alert('Are you really not able to follow instructions, answer yes, or no!');
-    console.log('Alaska-They are too dumb to answer yes or no');
+    console.log('They are too dumb to answer yes or no');
   }
 }
-whereAmIFromQuestion();
-
-function favoriteGame() {
-  var myFavoriteGame = prompt(theFirstQuestions[1]);
-
-  if(myFavoriteGame.toLowerCase() === theCorrectAnswers[1] || myFavoriteGame.toLowerCase() === theCorrectAnswers[1][0]) {
-    alert('Yes! I love to play Ultimate, my league team this year was a lot of fun. I also like basketball...');
-    console.log('There answer was correct, I love ultimate.');
-    correctAns = correctAns + 1;
-  } else if(myFavoriteGame.toLowerCase() === theIncorrectAnswers[1] || myFavoriteGame.toLowerCase() === theIncorrectAnswers[1][0]){
-    alert('Nope, Ultimate is my favorite game.');
-    console.log('There answer was incorrect, I love ultimate.');
-  } else {
-    alert('Are you really not able to follow instructions, answer yes, or no!');
-    console.log('Ultimate-They are too dumb to answer yes or no');
-  }
-}
-favoriteGame();
-
-function girlfriendQuestion() {
-  var girlfriend = prompt(theFirstQuestions[2]);
-
-  if(girlfriend.toLowerCase() === theCorrectAnswers[2] || girlfriend.toLowerCase() === theCorrectAnswers[2][0]) {
-    alert('Yes! I\'m pretty lucky, she\'s great!');
-    console.log('There answer was correct, Christine is my girlfriend');
-    correctAns = correctAns + 1;
-  } else if(girlfriend.toLowerCase() === theIncorrectAnswers[2] || girlfriend.toLowerCase() === theIncorrectAnswers[2][0]){
-    alert('Nope, I do have a girlfriend named Christine.');
-    console.log('There answer was incorrect, I have a girlfriend named Christine');
-  } else {
-    alert('Are you really not able to follow instructions, answer yes, or no!');
-    console.log('Girlfriend-They are too dumb to answer yes or no');
-  }
-}
-girlfriendQuestion();
-
-function travelQuestion() {
-  var travel = prompt(theFirstQuestions[3]);
-
-  if(travel.toLowerCase() === theCorrectAnswers[3] || travel.toLowerCase() === theCorrectAnswers[3][0]) {
-    alert('Yes! I just got back from Indonesia!');
-    console.log('There answer was correct, I do like to travel');
-    correctAns = correctAns + 1;
-  } else if(travel.toLowerCase() === theIncorrectAnswers[3] || travel.toLowerCase() === theIncorrectAnswers[3][0]){
-    alert('Nope, actually I do like to travel.');
-    console.log('There answer was incorrect, I do like to travel');
-  } else {
-    alert('Are you really not able to follow instructions, answer yes, or no!');
-    console.log('Travel-They are too dumb to answer yes or no');
-  }
-}
-travelQuestion();
-
-function codingQuestion() {
-  var progr = prompt(theFirstQuestions[4]);
-
-  if(progr.toLowerCase() === theCorrectAnswers[4] || progr.toLowerCase() === theCorrectAnswers[4][0]) {
-    alert('Correct! You\'re doing great.');
-    console.log('There answer was correct, I do like coding, now check out this website to see more about my background, thanks ' + userName + '!');
-    correctAns = correctAns + 1;
-  } else if(progr.toLowerCase() === theIncorrectAnswers[4] || progr.toLowerCase() === theIncorrectAnswers[4][0]){
-    alert('Nope, I do like coding.' );
-    console.log('There answer was incorrect, I do like coding');
-  } else {
-    alert('You can\'t follow instructions!');
-    console.log('Coding-They are too dumb to answer yes or no');
-  }
-}
-codingQuestion();
 
 function guessingGame() {
   alert('Welcome to my guessing game!');
