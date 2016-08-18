@@ -9,7 +9,7 @@ var whereAmIFrom = prompt('Am I from Alaska?');
 if(whereAmIFrom.toLowerCase() === 'yes' || whereAmIFrom.toLowerCase() === 'y') {
   alert('Right! I lived in Alaska for the last 20 years, but I grew up in Cincinnati...');
   console.log('There answer was correct, I am from Alaska');
-  var correctAns = correctAns + 1;
+  correctAns = correctAns + 1;
 } else if(whereAmIFrom.toLowerCase() === 'no' || whereAmIFrom.toLowerCase() === 'n'){
   alert('Actually I am from Alaska.');
   console.log('There answer was incorrect, I am from Alaska.');
@@ -23,7 +23,7 @@ var myFavoriteGame = prompt('Do I love to play Ultimate Frisbee?');
 if(myFavoriteGame.toLowerCase() === 'yes' || myFavoriteGame.toLowerCase() === 'y') {
   alert('Yes! I love to play Ultimate, my league team this year was a lot of fun. I also like basketball...');
   console.log('There answer was correct, I love ultimate.');
-  var correctAns = correctAns + 1;
+  correctAns = correctAns + 1;
 } else if(myFavoriteGame.toLowerCase() === 'no' || myFavoriteGame.toLowerCase() === 'n'){
   alert('Nope, Ultimate is my favorite game.');
   console.log('There answer was incorrect, I love ultimate.');
@@ -37,7 +37,7 @@ var girlfriend = prompt('Do I have a girlfriend named Christine?');
 if(girlfriend.toLowerCase() === 'yes' || girlfriend.toLowerCase() === 'y') {
   alert('Yes! I\'m pretty lucky, she\'s great!');
   console.log('There answer was correct, Christine is my girlfriend');
-  var correctAns = correctAns + 1;
+  correctAns = correctAns + 1;
 } else if(girlfriend.toLowerCase() === 'no' || girlfriend.toLowerCase() === 'n'){
   alert('Nope, I do have a girlfriend named Christine.');
   console.log('There answer was incorrect, I have a girlfriend named Christine');
@@ -51,7 +51,7 @@ var travel = prompt('Do I like to travel?');
 if(travel.toLowerCase() === 'yes' || travel.toLowerCase() === 'y') {
   alert('Yes! I just got back from Indonesia!');
   console.log('There answer was correct, I do like to travel');
-  var correctAns = correctAns + 1;
+  correctAns = correctAns + 1;
 } else if(travel.toLowerCase() === 'no' || travel.toLowerCase() === 'n'){
   alert('Nope, actually I do like to travel.');
   console.log('There answer was incorrect, I do like to travel');
@@ -65,7 +65,7 @@ var progr = prompt('Do I like coding?');
 if(progr.toLowerCase() === 'yes' || progr.toLowerCase() === 'y') {
   alert('Correct! You\'re doing great.');
   console.log('There answer was correct, I do like coding, now check out this website to see more about my background, thanks ' + userName + '!');
-  var correctAns = correctAns + 1;
+  correctAns = correctAns + 1;
 } else if(progr.toLowerCase() === 'no' || progr.toLowerCase() === 'n'){
   alert('Nope, I do like coding.' );
   console.log('There answer was incorrect, I do like coding');
@@ -83,7 +83,7 @@ for (var i = 0; i < 4; i++){
   if(randomNum === userGuess) {
     alert('Congratulations, you got it!');
     i = 4;
-    var correctAns = correctAns + 1;
+    correctAns = correctAns + 1;
   }else if (i < 3) {
     if(randomNum > userGuess){
       alert('Nice try, but that\'s too low...try again!');
@@ -97,16 +97,22 @@ for (var i = 0; i < 4; i++){
 
 
 var countryAnswer = new Array('argentina', 'indonesia', 'thailand', 'chile', 'el salvador', 'guadalupe');
-for(var j = 0; j < countryAnswer.length; j++) {
+for(var k = 0; k < 6; k++) {
   var countryGuess = prompt('One, more question. Out of the listed countries, guess one I have been to in the last 2 years? Hint:There are 6! Norway, India, Argentina, Indonesia, Kenya, Thailand, Chile, Brazil, El Salvador, Guadalupe, China');
-
   var countryGuess1 = countryGuess.toLowerCase();
-  console.log(countryAnswer[0]);
-  if(countryGuess1 === countryAnswer[j]){
-    var correctAns = correctAns + 1;
-    console.log('# of correct answers is' + correctAns);
-    alert('Great job, you answered ' + correctAns + ' out of 7 correctly. Now check out this website to see more about my background, thanks ' + userName + '!');
-  } else {
+  var checkAns = false;
+  console.log(countryAnswer[j]);
+  console.log(countryGuess1);
+  for(var j = 0; j < 6; j++) {
+    if(countryGuess1 === countryAnswer[j]){
+      checkAns = true;
+    }
+  }
+  if(checkAns === true){
+    correctAns = correctAns + 1;
+    alert('Great job, you answered ' + correctAns + ' out of 7 correctly. Now check out this website to see more about my background, thanks ' + '!');
+    k = 5;
+  } else{
     alert('woops');
   }
 }
