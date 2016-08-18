@@ -38,3 +38,13 @@
 .pJob {
   padding-left: 135px;
 }
+div li{
+  list-style: none;
+}
+ol li{
+  font-family: cursive;
+  font-size: 15px;
+}
+ul li{
+  margin-bottom: 50px;
+}
