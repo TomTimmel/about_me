@@ -3,6 +3,7 @@
 var userName = prompt('What\'s your name?');
 alert('Thanks ' + userName + ', please answer the following questions for me by typing yes or no.  OK?');
 console.log ('The users name is ' + userName);
+document.write('<p>' + userName + ', I\'m glad you got that one right!' + '</p>');
 var correctAns = 0;
 
 var theFirstQuestions = ['Am I from Alaska?', 'Do I love to play Ultimate Frisbee?', 'Do I have a girlfriend named Christine?', 'Do I like to travel?','Do I like coding?'];
@@ -21,10 +22,12 @@ function tomsQuestions(pointer) {
 
   if(theResponse.toLowerCase() === theCorrectAnswers[pointer] || theResponse.toLowerCase() === theCorrectAnswers[pointer][0]) {
     alert(correctMessages[pointer]);
+    document.write('<p>' + correctMessages[pointer] + '</p>');
     console.log(correctMessages[pointer]);
     correctAns += 1;
   } else if(theResponse.toLowerCase() === theIncorrectAnswers[pointer] || theResponse.toLowerCase() === theIncorrectAnswers[pointer][0]){
     alert(incorrectMessages[pointer]);
+    document.write('<p>' + incorrectMessages[pointer] + '</p>');
     console.log(incorrectMessages[pointer]);
   } else {
     alert('Are you really not able to follow instructions, answer yes, or no!');
@@ -42,6 +45,7 @@ function guessingGame() {
     userGuess = Number(userGuess);
     if(randomNum === userGuess) {
       alert('Congratulations, you got it!');
+      document.write('<p>' + userGuess + ' Congratulations, you got it!' + '</p>');
       i = 4;
       correctAns = correctAns + 1;
     }else if (i < 3) {
@@ -52,6 +56,7 @@ function guessingGame() {
       }
     }else {
       alert ('Nope you didn\'t guess it, good try though.');
+      document.write('<p>' + userGuess + ' Nope you didn\'t guess it, good try though.' + '</p>');
     }
   }
 }
@@ -73,9 +78,15 @@ function visitedCountries() {
     if(checkAns === true){
       correctAns = correctAns + 1;
       alert('Great job, you answered ' + correctAns + ' out of 7 correctly. Now check out this website to see more about my background, thanks ' + userName + '!');
+      document.write('<p>' + countryGuess + ' is correct' + '</p>');
+      document.write('<h1>' + 'Congratulations, you answered ' + correctAns + ' out of 7 correctly!' + '</h1>');
       k = 5;
     } else{
       alert('Woops, I have not been there, please try again...');
+      if(k > 4) {
+        document.write('<p>' + 'Sorry, none of your answers are correct' + '</p>');
+        document.write('<h1>' + 'Congratulations, you answered ' + correctAns + ' out of 7 correctly!' + '</h1>');
+      }
     }
   }
 }
